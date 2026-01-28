@@ -89,9 +89,8 @@ The **Evaluator Agent** reviews the final text against the original user query a
 
 ```mermaid
 graph TD
-    User([User Query]) --> Planner{Planner Agent<br/>(Llama 3.1 8B)}
-    
-    Planner -->|Dependency Graph| Executor[Executor Node<br/>(LangGraph)]
+    User([User Query]) --> Planner{Planner Agent\nLlama 3.1 8B}
+    Planner -->|Dependency Graph| Executor[Executor Node\nLangGraph]
     
     Executor -->|Run Step 1| Tool1[Tools: Web/Finance/etc]
     Executor -->|Run Step 2| Tool2[Tools: Math/Weather/etc]
@@ -100,15 +99,13 @@ graph TD
     Tool2 -.->|Result 2| Executor
     
     Executor -->|Check Plan Status| Decision{All Steps Done?}
-    
     Decision -->|No| Executor
-    Decision -->|Yes| Solver[Answer Generator<br/>(Llama 3.3 70B)]
+    Decision -->|Yes| Solver[Answer Generator\nLlama 3.3 70B]
     
-    Solver --> Evaluator{Evaluator Role<br/>(Llama 3.1 8B)}
-    
+    Solver --> Evaluator{Evaluator Role\nLlama 3.1 8B}
     Evaluator -->|Pass| Final([Final Output])
     Evaluator -->|Fail| Fallback([Fallback Message])
-
+    
     classDef llm fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
     classDef tool fill:#fff3e0,stroke:#e65100,stroke-width:2px;
     
