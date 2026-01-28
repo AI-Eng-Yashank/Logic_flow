@@ -1,0 +1,15 @@
+streamlit
+groq
+duckduckgo-search
+pydantic
+python-dotenv
+langchain-groq
+langchain-core
+wikipedia
+arxiv
+yfinance
+openmeteo-requests
+requests-cache
+retry-requests
+pandas
+langgraph
