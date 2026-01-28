@@ -22,7 +22,7 @@ It moves beyond simple "Router" patterns to a **"Plan-and-Execute"** architectur
 The system does not just guess a tool to call. It follows a rigorous planning process. Here is a step-by-step walkthrough of how the agent handles a multi-variable query.
 
 ### Example Query
-> **"Get the stock price of Apple, add 20 percent to it, and also find the current weather in Mumabai."**
+> **"Get the stock price of Apple, add 20 percent to it, and also find the current weather in Mumbai."**
 
 ### Phase 1: Planning (The Architect)
 The **Planner Agent** (Llama 3.1 8B) analyzes the query and breaks it down into discrete steps with dependencies.
