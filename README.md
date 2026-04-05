@@ -60,7 +60,7 @@ The **Answer Generator** (Llama 3.3 70B) receives the complete context:
 > Step 3 Output: Calculated Value 264.60
 
 It generates a human-friendly response:
-> "The current stock price of Apple is $220.50. If you add 20%, the value would be $264.60. Meanwhile, the weather in Cupertino is currently 21°C and sunny."
+> "The current stock price of Apple is $220.50. If you add 20%, the value would be $264.60. Meanwhile, the weather in Mumbai is currently 30°C and sunny."
 
 ### Phase 4: Evaluation (The Guard)
 The **Evaluator Agent** reviews the final text against the original user query and the tool outputs to ensure no hallucinations occurred. If valid, the answer is returned to the user.
